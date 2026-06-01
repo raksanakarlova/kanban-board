@@ -48,20 +48,26 @@ function CardUi({
             type="text"
             value={editText}
             onChange={(e) => setEditText(e.target.value)}
-            className="w-full border-b border-gray-300 pb-1 text-lg 
+            className="w-full dark:text-white border-b border-gray-300 pb-1 text-lg 
             font-medium outline-none focus:border-gray-600"
           />
           <textarea
             value={editDescription}
             onChange={(e) => setEditDescription(e.target.value)}
             rows={3}
-            className="w-full resize-none rounded border
+            onFocus={(e) =>
+              e.target.setSelectionRange(
+                e.target.value.length,
+                e.target.value.length
+              )
+            }
+            className="w-full dark:text-white resize-none rounded border
              border-gray-200 p-2 text-sm outline-none focus:border-gray-400"
           />
           <select
             value={priority}
             onChange={(e) => setPriority(e.target.value as Priority)}
-            className="w-full rounded border border-gray-200 p-2 text-sm outline-none"
+            className="w-full dark:text-white rounded border border-gray-200 p-2 text-sm outline-none"
           >
             <option value="low">Low</option>
             <option value="medium">Medium</option>
@@ -97,7 +103,7 @@ function CardUi({
         </span>
       </div>
       {card.description && (
-        <p className="wrap-anywhere text-sm text-gray-700 dark:text-white">
+        <p className="wrap-anywhere text-sm mb-2 text-gray-700 dark:text-white">
           {card.description}
         </p>
       )}
