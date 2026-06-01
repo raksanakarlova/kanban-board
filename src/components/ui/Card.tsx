@@ -40,7 +40,7 @@ function CardUi({
     <div
       draggable
       onDragStart={handleDragStart}
-      className="flex flex-col border dark:bg-gray-400 border-gray-200 bg-white mx-auto my-4 w-90 h-35 p-4 rounded-md shadow-lg cursor-grab active:cursor-grabbing"
+      className="flex flex-col w-90 min-h-35 mx-auto my-4 p-4 borderbg-white border-gray-200 dark:bg-gray-600 dark:border-gray-200/20 rounded-md shadow-lg cursor-grab active:cursor-grabbing"
     >
       <Modal isOpen={isEditing} onClose={() => setEditing(false)}>
         <div className="flex flex-col gap-3">
@@ -84,7 +84,7 @@ function CardUi({
       </Modal>
 
       <div className="flex justify-between items-start gap-2 mb-1">
-        <h3 className="min-w-0 wrap-break-word text-gray-700 dark:text-white">
+        <h3 className="min-w-0 wrap-anywhere text-gray-700 dark:text-white">
           {card.title}
         </h3>
         <span
@@ -97,7 +97,7 @@ function CardUi({
         </span>
       </div>
       {card.description && (
-        <p className="wrap-break-word text-sm text-gray-700 dark:text-white">
+        <p className="wrap-anywhere text-sm text-gray-700 dark:text-white">
           {card.description}
         </p>
       )}
