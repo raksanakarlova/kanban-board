@@ -108,7 +108,7 @@ function CardUi({
         </p>
       )}
       <select
-        className="md:hidden placeholder: p-1 text-xs mt-2 text-gray-500 dark:text-white border border-gray-200 rounded outline-none"
+        className="md:hidden placeholder: p-1 text-xs mt-2 mb-4 text-gray-500 dark:text-white border border-gray-200 rounded outline-none"
         defaultValue=""
         onChange={(e) => {
           if (e.target.value) onMove(card.id, columnId, e.target.value)
