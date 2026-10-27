@@ -38,7 +38,7 @@ A task management board for tracking work across multiple status columns — ins
 ### Installation
 
 ```bash
-git clone https://github.com/raksanakarlova/kanban-board---.git
+git clone https://github.com/raksanakarlova/kanban-board.git
 cd kanban-board
 npm install
 npm run dev
